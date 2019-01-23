@@ -23,6 +23,7 @@ class App extends React.Component {
     }
 
     if (!this.state.errorMessage && this.state.lat) {
+      // passing state to prop lat
       return <SeasonDisplay lat={this.state.lat} />;
     }
 
