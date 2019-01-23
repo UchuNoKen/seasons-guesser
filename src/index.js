@@ -17,7 +17,7 @@ class App extends React.Component {
     console.log("Component updated - it re-rendered!");
   }
 
-  render() {
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
@@ -27,6 +27,10 @@ class App extends React.Component {
     }
 
     return <Loader message="Waiting for location request acceptance..." />;
+  }
+
+  render() {
+    return <div>{this.renderContent()}</div>;
   }
 }
 
